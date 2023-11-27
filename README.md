@@ -2,6 +2,6 @@
 
 Constitution de voyages à partir d'un catalogue de trajets
 
-[TO DO] :
-    -- Comment code
-    -- Fix last data leak
+[TO DO]
+    - Comment code
+    - Fix last data leak
