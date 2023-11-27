@@ -4,4 +4,4 @@ Trajet_simple.o
 Trajet_compose.o 
 Maillon.o 
 LC.o
-.gitignore
+./.gitignore
