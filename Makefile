@@ -1,8 +1,9 @@
-FLAGS = -ansi -pedantic -Wall -std=c++11 -DMAP
+MAP = -DMAP
+FLAGS = -ansi -pedantic -Wall -std=c++11
 OBJ = trajets.o Trajet.o Trajet_simple.o Trajet_compose.o Maillon.o LC.o
 
 trajets: $(OBJ)
-		g++ -o trajets $(OBJ) $(FLAGS)
+		g++ -o trajets $(OBJ) $(FLAGS) $(MAP)
 
 trajets.o: trajets.cpp
 		g++ -c trajets.cpp $(FLAGS)

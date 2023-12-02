@@ -91,14 +91,6 @@ LC::~LC ( )
     #endif
     
     delete ptr_deb;
-    // Maillon * courant1 = ptr_deb;
-    // Maillon * courant2 = ptr_deb;
-    // while (courant1 != NULL)
-    // {
-    //     courant1 = courant1->Get_next();
-    //     delete courant2;
-    //     courant2 = courant1;
-    // }   
 } //----- Fin de ~LC
 
 
