@@ -11,8 +11,8 @@ using namespace std;
 int main ()
 {
     LC * catalogue_trajets = new LC();  // création du catalogue
-    bool actif = 1; 
-    while (actif)
+    bool en_fonctionnement = 1; 
+    while (en_fonctionnement)
     {
         char reponse;
         cout << "Liste des commandes" << endl;
@@ -95,14 +95,13 @@ int main ()
         case '4':
             {delete catalogue_trajets;  // la destruction du catalogue implique la destruction en cascade de tous les trajets et maillons
             cout << "Au revoir !" << endl;
-            goto fin_app;
+            en_fonctionnement = 0;
             break;}
         
         default:
-            {cout << endl << "Veuillez choisir une option valide." << endl;
+            {cout << endl << "Veuillez choisir une option valide." << endl << endl;
             break;}
         }
     }
-    fin_app : 
     return 0;
 }
