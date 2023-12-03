@@ -1,10 +1,10 @@
-/*************************************************************************
-                           Trajet_simple  -  description 
-                             ------------------- 
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+/******************************************************************************************
+                           Trajet_simple  -  Classe descendante de <Trajet>
+                             -------------------
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Réalisation de la classe <Trajet_simple> (fichier Trajet_simple.cpp) ------------
 
@@ -23,11 +23,6 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Trajet_simple::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 void Trajet_simple::Afficher ( )
 {
@@ -36,26 +31,22 @@ void Trajet_simple::Afficher ( )
 }
 
 //-------------------------------------------- Constructeurs - destructeur
-Trajet_simple::Trajet_simple ( char * un_depart, char * une_arrivee, char * un_transport ) : Trajet (un_depart, une_arrivee), transport(un_transport)
-// Algorithme :
-//
+Trajet_simple::Trajet_simple ( char * un_depart, char * une_arrivee, char * un_transport ) : Trajet (un_depart, une_arrivee)
 {
     #ifdef MAP
         cout << "Appel au constructeur de <Trajet_simple>" << endl;
     #endif
+    transport = new char[20];
+    strcpy(transport, un_transport);
 } //----- Fin de Trajet_simple
 
 
 Trajet_simple::~Trajet_simple ( )
-// Algorithme :
-//
 {
     #ifdef MAP
         cout << "Appel au destructeur de <Trajet_simple>" << endl;
     #endif
     delete [] transport;
-    delete [] depart;
-    delete [] arrivee;
 } //----- Fin de ~Trajet_simple
 
 

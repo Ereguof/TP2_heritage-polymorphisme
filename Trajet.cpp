@@ -1,10 +1,10 @@
-/************************************************************************* 
-                           Trajet  -  description
+/******************************************************************************************
+                           Trajet  -  Classe implémentant un trajet
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Réalisation de la classe <Trajet> (fichier Trajet.cpp) ------------
 
@@ -23,11 +23,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Trajet::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
+
 void Trajet::Afficher ()
 {
     cout << "\n" << "De " << depart << " à " << arrivee;
@@ -44,32 +40,26 @@ bool Trajet::Correspond ( char * un_depart, char * une_arrivee )
 }
 
 //-------------------------------------------- Constructeurs - destructeur
-Trajet::Trajet ( )
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "Appel au constructeur par défaut de <Trajet>" << endl;
-#endif
-} //----- Fin de Trajet (constructeur par défaut)
 
-Trajet::Trajet ( char * un_depart, char * une_arrivee ) : depart (un_depart), arrivee (une_arrivee)
-// Algorithme :
-//
+Trajet::Trajet ( char * un_depart, char * une_arrivee )
 {
     #ifdef MAP
         cout << "Appel au constructeur de <Trajet>" << endl;
     #endif
+    depart = new char[20];
+    strcpy(depart, un_depart);
+    arrivee = new char[20];
+    strcpy(arrivee, une_arrivee);
 } //----- Fin de Trajet
 
 
 Trajet::~Trajet ( )
-// Algorithme :
-//
 {
     #ifdef MAP
         cout << "Appel au destructeur de <Trajet>" << endl;
     #endif
+    delete [] depart;
+    delete [] arrivee;
 } //----- Fin de ~Trajet
 
 

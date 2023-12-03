@@ -1,10 +1,10 @@
-/************************************************************************* 
-                           Maillon  -  description 
+/******************************************************************************************
+                           Maillon  -  Classe implémentant un maillon de liste chaînée <LC>
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Réalisation de la classe <Maillon> (fichier Maillon.cpp) ------------
 
@@ -23,11 +23,6 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Maillon::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 void Maillon::Set_next( Maillon * un_next )
 {
@@ -45,29 +40,17 @@ Trajet * Maillon::Get_trajet( )
 }
 
 //-------------------------------------------- Constructeurs - destructeur
-Maillon::Maillon ( )
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "Appel au constructeur par défaut de <Maillon>" << endl;
-#endif
-} //----- Fin de Maillon (constructeur par défaut)
 
 Maillon::Maillon ( Trajet * un_trajet ) : trajet (un_trajet), next(NULL)
-// Algorithme :
-//
 {
     #ifdef MAP
         cout << "Appel au constructeur de <Maillon>" << endl;
     #endif
 
-} //----- Fin de Maillon
+} //----- Fin de Maillon (constructeur avec paramètre)
 
 
 Maillon::~Maillon ( )
-// Algorithme :
-//
 {
     #ifdef MAP
         cout << "Appel au destructeur de <Maillon>" << endl;

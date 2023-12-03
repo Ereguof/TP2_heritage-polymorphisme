@@ -1,10 +1,10 @@
-/*************************************************************************
-                           Trajet_compose  -  description
+/******************************************************************************************
+                           Trajet_compose  -  Classe descendante de <Trajet>
                              -------------------
-    début                : $DATE$ 
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Interface de la classe <Trajet_compose> (fichier Trajet_compose.h) ----------------
 #if ! defined ( Trajet_compose_H )
@@ -20,8 +20,9 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Trajet_compose>
-//
-//
+// Classe permettant d'implémenter un trajet contenant plusieurs escales
+// sous la forme d'une liste chaînée de trajets simples : l'arrivée d'un 
+// trajet simple est le depart du suivant.
 //------------------------------------------------------------------------
 
 class Trajet_compose : public Trajet
@@ -30,26 +31,30 @@ class Trajet_compose : public Trajet
 
 public:
 //----------------------------------------------------- Méthodes publiques
-    // type Méthode ( liste des paramètres );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     void Afficher ( );
+    // Mode d'emploi :
+    // Affiche toutes les escales du trajet.
+    //
+    // Contrat :
+    // La liste d'escales est bien initialisée.
 
 //-------------------------------------------- Constructeurs - destructeur
     Trajet_compose ( char * un_depart, char * une_arrivee, LC * une_liste_escales); 
     // Mode d'emploi :
+    // Fait appel au constructeur de <Trajet> pour le départ et l'arrivée, et 
+    // copie une_liste_escales dans l'attribut de la classe.
     //
     // Contrat :
-    //
+    // La liste chaînée contenant les escales existe, tout comme les deux 
+    // tableaux de char.
 
     virtual ~Trajet_compose ( );
     // Mode d'emploi :
+    // Détruit la liste chaînée pointée par liste_escales.
     //
     // Contrat :
-    //
+    // liste_escales existe.
 
 //------------------------------------------------------------------ PRIVE
 

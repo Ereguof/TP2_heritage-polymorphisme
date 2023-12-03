@@ -1,10 +1,10 @@
-/************************************************************************* 
-                           LC  -  description 
+/******************************************************************************************
+                           LC  -  Classe implémentant une liste chaînée 
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Réalisation de la classe <LC> (fichier LC.cpp) ------------
 
@@ -23,11 +23,6 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type LC::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 void LC::Ajouter_queue (Trajet * un_trajet)
 {
@@ -62,6 +57,7 @@ void LC::Recherche ( char * un_depart, char * une_arrivee)
 {
     Maillon * courant = ptr_deb;
     cout << "Liste des trajets correspondants :" << endl;
+    cout << endl;
     while (courant != NULL)
     {
         if (courant->Get_trajet()->Correspond(un_depart, une_arrivee))
@@ -70,12 +66,11 @@ void LC::Recherche ( char * un_depart, char * une_arrivee)
         }
         courant = courant->Get_next();
     }
+    cout << endl;
 }
 
 //-------------------------------------------- Constructeurs - destructeur
 LC::LC ( )
-// Algorithme :
-//
 {
     #ifdef MAP
         cout << "Appel au constructeur par défaut de <LC>" << endl;
@@ -83,8 +78,6 @@ LC::LC ( )
 } //----- Fin de LC (constructeur par défaut)
 
 LC::~LC ( )
-// Algorithme :
-//
 {
     #ifdef MAP
         cout << "Appel au destructeur de <LC>" << endl;

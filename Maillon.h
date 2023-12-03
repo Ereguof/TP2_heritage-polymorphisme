@@ -1,10 +1,10 @@
-/************************************************************************* 
-                           Maillon  -  description 
+/******************************************************************************************
+                           Maillon  -  Classe implémentant un maillon de liste chaînée <LC>
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Interface de la classe <Maillon> (fichier Maillon.h) ----------------
 #if ! defined ( Maillon_H )
@@ -19,8 +19,8 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Maillon>
-//
-//
+// Maillon de liste chaînée <LC> contenant un pointeur vers un trajet 
+// et un pointeur vers le maillon suivant.
 //------------------------------------------------------------------------
 
 class Maillon
@@ -29,34 +29,44 @@ class Maillon
 
 public:
 //----------------------------------------------------- Méthodes publiques
-    // type Méthode ( liste des paramètres );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     void Set_next( Maillon * un_next );
-    Maillon * Get_next( );
-    Trajet * Get_trajet( );
+    // Mode d'emploi :
+    // Permet d'affecter à l'attribut next le maillon suivant.
+    // 
+    // Contrat :
+    // Le maillon pointé par un_next existe.
 
-//-------------------------------------------- Constructeurs - destructeur
-    Maillon ( );
-    // Mode d'emploi (constructeur par défaut) :
+    Maillon * Get_next( );
+    // Mode d'emploi :
+    // Renvoie un pointeur vers le maillon suivant.
     //
     // Contrat :
+    // Si c'est le dernier maillon de la chaîne, renvoie NULL.
+
+    Trajet * Get_trajet( );
+    // Mode d'emploi :
+    // Renvoie un pointeur vers le trajet contenu par le maillon.
     //
+    // Contrat :
+    // Maillon possède bien un trajet.
+
+//-------------------------------------------- Constructeurs - destructeur
 
     Maillon ( Trajet * trajet );
     // Mode d'emploi :
-    //
+    // Prend en paramètre un pointeur vers un trajet existant, qui devient 
+    // alors le trajet du maillon.
+    // 
     // Contrat :
-    //
+    // trajet pointe bien vers un trajet existant.
 
     virtual ~Maillon ( );
     // Mode d'emploi :
-    //
+    // Détruit le trajet contenu par le maillon et le maillon suivant.
+    // 
     // Contrat :
-    //
+    // Maillon possède bien un trajet.
 //------------------------------------------------------------------ PRIVE
 
 protected:

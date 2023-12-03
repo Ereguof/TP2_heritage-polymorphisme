@@ -1,10 +1,10 @@
-/*************************************************************************
-                           Trajet_compose  -  description
+/******************************************************************************************
+                           Trajet_compose  -  Classe descendante de <Trajet>
                              -------------------
-    début                : $DATE$ 
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
+    début                : 11/2023
+    copyright            : (C) 11/2023 par Joris FELZINES - Guillaume MANTZARIDES
+    e-mail               : joris.felzines@insa-lyon.fr - guillaume.mantzarides@insa-lyon.fr
+*******************************************************************************************/
 
 //---------- Réalisation de la classe <Trajet_compose> (fichier Trajet_compose.cpp) ------------
 
@@ -23,11 +23,6 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Trajet_compose::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 void Trajet_compose::Afficher ( )
 {
