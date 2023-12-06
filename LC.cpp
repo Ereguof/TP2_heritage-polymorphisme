@@ -40,7 +40,7 @@ void LC::Ajouter_queue (Trajet * un_trajet)
     ++taille;
 }
 
-void LC::Afficher_liste ( )
+void LC::Afficher_liste ( ) const
 {
     Maillon * tmp = ptr_deb;
     int compteur = 1;
@@ -53,7 +53,7 @@ void LC::Afficher_liste ( )
     }
 }
 
-void LC::Recherche ( char * un_depart, char * une_arrivee)
+void LC::Recherche (const char * un_depart, const char * une_arrivee) const
 {
     Maillon * courant = ptr_deb;
     cout << "Liste des trajets correspondants :" << endl;

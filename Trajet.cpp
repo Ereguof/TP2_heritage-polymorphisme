@@ -24,12 +24,12 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 
-void Trajet::Afficher ()
+void Trajet::Afficher ( ) const
 {
     cout << "\n" << "De " << depart << " à " << arrivee;
 }
 
-bool Trajet::Correspond ( char * un_depart, char * une_arrivee )
+bool Trajet::Correspond ( const char * un_depart, const char * une_arrivee ) const
 {
     bool result = false;
     if (strcmp(depart, un_depart) == 0 && strcmp(arrivee, une_arrivee) == 0)

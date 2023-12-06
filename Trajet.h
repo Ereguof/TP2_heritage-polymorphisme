@@ -29,14 +29,14 @@ class Trajet
 public: 
 //----------------------------------------------------- Méthodes publiques
 
-    virtual void Afficher ();
+    virtual void Afficher ( ) const;
     // Mode d'emploi :
     // Affiche le départ et l'arrivée du trajet.
     //
     // Contrat :
     // Le départ et l'arrivée existent.
     
-    bool Correspond ( char * un_depart, char * une_arrivee );
+    bool Correspond ( const char * un_depart, const char * une_arrivee ) const;
     // Mode d'emploi :
     // Prend deux pointeurs vers des tableaux de char en paramètre et les 
     // compare avec les attributs de la classe : renvoie true si ils 

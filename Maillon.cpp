@@ -29,12 +29,12 @@ void Maillon::Set_next( Maillon * un_next )
     next = un_next;
 }
 
-Maillon * Maillon::Get_next( ) 
+Maillon * Maillon::Get_next( ) const
 {
     return next;
 }
 
-Trajet * Maillon::Get_trajet( ) 
+Trajet * Maillon::Get_trajet( ) const
 {
     return trajet;
 }

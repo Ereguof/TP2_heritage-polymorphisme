@@ -29,7 +29,7 @@ class Trajet_simple : public Trajet
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    void Afficher ( );
+    void Afficher ( ) const;
     // Mode d'emploi :
     // Affiche le depart, l'arrivée et le mode de transport du trajet.
     //

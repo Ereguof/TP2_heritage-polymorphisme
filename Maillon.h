@@ -37,14 +37,14 @@ public:
     // Contrat :
     // Le maillon pointé par un_next existe.
 
-    Maillon * Get_next( );
+    Maillon * Get_next( ) const;
     // Mode d'emploi :
     // Renvoie un pointeur vers le maillon suivant.
     //
     // Contrat :
     // Si c'est le dernier maillon de la chaîne, renvoie NULL.
 
-    Trajet * Get_trajet( );
+    Trajet * Get_trajet( ) const;
     // Mode d'emploi :
     // Renvoie un pointeur vers le trajet contenu par le maillon.
     //
@@ -74,7 +74,7 @@ protected:
 
 //----------------------------------------------------- Attributs protégés
     Trajet * trajet;
-    Maillon * next; 
+    Maillon * next = nullptr; 
 };
 
 //-------------------------------- Autres définitions dépendantes de <Maillon>

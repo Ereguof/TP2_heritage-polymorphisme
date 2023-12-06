@@ -24,7 +24,7 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 
-void Trajet_simple::Afficher ( )
+void Trajet_simple::Afficher ( ) const
 {
     cout << "Simple" << endl;
     cout << "   De " << depart << " à " << arrivee << " en " << transport << endl;

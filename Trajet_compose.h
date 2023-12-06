@@ -32,7 +32,7 @@ class Trajet_compose : public Trajet
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    void Afficher ( );
+    void Afficher ( ) const;
     // Mode d'emploi :
     // Affiche toutes les escales du trajet.
     //

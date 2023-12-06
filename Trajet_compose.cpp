@@ -24,7 +24,7 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 
-void Trajet_compose::Afficher ( )
+void Trajet_compose::Afficher ( ) const
 {
     cout << "Compose" << "\n" << "{" << endl;
     liste_escales->Afficher_liste();

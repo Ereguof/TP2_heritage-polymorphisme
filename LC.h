@@ -37,14 +37,14 @@ public:
     // Contrat :
     // Le trajet pointé est effectivement présent en memoire.
 
-    void Afficher_liste ( );
+    void Afficher_liste ( ) const;
     // Mode d'emploi :
     // Affiche les contenus de tout les maillons.
     //
     // Contrat :
     // Une liste vide n'affiche rien.
 
-    void Recherche ( char * un_depart, char * une_arrivee);
+    void Recherche (const char * un_depart, const char * une_arrivee) const;
     // Mode d'emploi :
     // Prend en paramètre deux tableaux de char et les compare aux attributs de chaque
     // maillon. Si le départ et l'arrivée du trajet contenu par le maillon correspondent,
@@ -75,8 +75,8 @@ protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-    Maillon * ptr_deb = NULL;
-    Maillon * ptr_fin = NULL;
+    Maillon * ptr_deb = nullptr;
+    Maillon * ptr_fin = nullptr;
     int taille = 0;
 };
 
