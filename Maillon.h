@@ -74,7 +74,7 @@ protected:
 
 //----------------------------------------------------- Attributs protégés
     Trajet * trajet;
-    Maillon * next = nullptr; 
+    Maillon * next = NULL;
 };
 
 //-------------------------------- Autres définitions dépendantes de <Maillon>

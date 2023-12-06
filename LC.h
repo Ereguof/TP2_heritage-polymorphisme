@@ -75,8 +75,8 @@ protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-    Maillon * ptr_deb = nullptr;
-    Maillon * ptr_fin = nullptr;
+    Maillon * ptr_deb = NULL;
+    Maillon * ptr_fin = NULL;
     int taille = 0;
 };
 
