@@ -10,7 +10,7 @@ using namespace std;
 
 int main ()
 {
-    LC * catalogue_trajets = new LC();  // création du catalogue
+    LC * catalogue_trajets = new LC;  // création du catalogue
     bool en_fonctionnement = 1; 
     while (en_fonctionnement)
     {
@@ -46,7 +46,7 @@ int main ()
             else if (type == 2)
             {
                 bool actif = 1;     // permet de savoir si une escale supplémentaire doit être ajoutée   
-                LC * liste_escales_tmp = new LC();  // initialisation de la liste d'escale à attribuer au trajet composé
+                LC * liste_escales_tmp = new LC;  // initialisation de la liste d'escale à attribuer au trajet composé
                 char true_depart[20];   // permet de garder en mémoire le tout premier départ et la dernière escale
                 char true_arrivee[20];
                 cout << "Donnez point de départ" << endl;     
