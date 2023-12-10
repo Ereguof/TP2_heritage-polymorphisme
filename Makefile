@@ -1,6 +1,7 @@
 MAP = -DMAP
 FLAGS = -ansi -pedantic -Wall -std=c++11
 OBJ = trajets.o Trajet.o Trajet_simple.o Trajet_compose.o Maillon.o LC.o
+TARGET = trajets
 
 trajets: $(OBJ)
 		g++ -o trajets $(OBJ) $(FLAGS) $(MAP)
@@ -22,3 +23,6 @@ Maillon.o: Maillon.cpp
 
 LC.o: LC.cpp
 		g++ -c LC.cpp $(FLAGS)
+
+clean:
+		rm -f $(OBJ) $(TARGET)
